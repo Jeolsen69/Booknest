@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <title>Онлайн-книжный магазин</title>
+  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <title>BookNest</title>
+  <style>
+    .book-card {
+      position: relative;
+      overflow: hidden;
+      padding-bottom: 40px;
+      transition: transform 0.3s ease;
+    }
+
+    .book-card:hover {
+      transform: scale(1.02);
+    }
+
+    .book-card button {
+      position: absolute;
+      bottom: 15px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: none;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .book-card:hover button {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">BookNest</div>
+    <nav>
+      <a href="index.html">Главная</a>
+      <a href="catalog.html">Каталог</a>
+      
+    </nav>
+  </header>
+  <div class="genre-bar">
+    <button onclick="filterByGenre('Художественная литература')">Художественная литература</button>
+    <button onclick="filterByGenre('Романтика')">Романтика</button>
+    <button onclick="filterByGenre('Детективы')">Детективы</button>
+    <button onclick="filterByGenre('Фэнтези')">Фэнтези</button>
+    <button onclick="filterByGenre('Бизнес')">Бизнес</button>
+    <button onclick="filterByGenre('Научная литература')">Научная литература</button>
+  </div>
+
+
+  
+</div>
+  <main class="home-content">
+    <h1>Добро пожаловать в BookNest!</h1>
+    <h2>Популярные книги</h2>
+    <div class="book-grid">
+        <div class="book-card">
+          <img src="https://m.media-amazon.com/images/I/71rpa1-kyvL.jpg" alt="Book A">
+          <h3>1984</h3>
+          <p>Джордж Оруэлл</p>
+          <p class="price" style="color: black;">₽550</p>
+          <button onclick="addToCart('1984')">Добавить в корзину</button>
+        </div>
+      
+        <div class="book-card">
+          <img src="https://strgimgr.umico.az/sized/840/515665-c59ca7dcf0c9931496f839809daecff7.jpg" alt="Book B">
+          <h3>Цветы для Элджернона</h3>
+          <p>Дэниел Киз</p>
+          <p class="price" style="color: black;">₽450</p>
+          <button onclick="addToCart('Цветы для Элджернона')">Добавить в корзину</button>
+        </div>
+      
+        <div class="book-card">
+          <img src="https://kitabevim.az/wp-content/uploads/2021/05/Marqaret-1.jpg" alt="Book C">
+          <h3>Унесённые ветром</h3>
+          <p>Маргарет Митчелл</p>
+          <p class="price" style="color: black;">₽600</p>
+          <button onclick="addToCart('Унесённые ветром')">Добавить в корзину</button>
+        </div>
+      
+        <div class="book-card">
+          <img src="https://www.litres.ru/pub/c/cover/127231.jpg" alt="Book D">
+          <h3>Крестный отец</h3>
+          <p>Марио Пьюзо</p>
+          <p class="price" style="color: black;">₽750</p>
+          <button onclick="addToCart('Крестный отец')">Добавить в корзину</button>
+        </div>
+      
+        <div class="book-card">
+          <img src="https://static.insales-cdn.com/r/mIZUJ2jcbWk/rs:fit:570:570:1/q:80/plain/images/products/1/3963/390131579/uk639584.jpg@jpg" alt="Book E">
+          <h3>Оно</h3>
+          <p>Стивен Кинг</p>
+          <p class="price" style="color: black;">₽800</p>
+          <button onclick="addToCart('Оно')">Добавить в корзину</button>
+        </div>
+      </div>
+
+<!-- Section 1: Что почитать: выбор редакции -->
+<div class="section">
+    <h2>Что почитать: выбор редакции</h2>
+    <div class="book-grid">
+      <div class="book-card">
+        <img src="https://cdn.azbooka.ru/cv/w1100/fb79cabe-be6a-4a3e-804d-6209d66aa607.jpg" alt="Book 1">
+        <h3>Мастер и Маргарита</h3>
+        <p>М. А. Булгаков</p>
+        <p class="price" style="color: black;">₽500</p>
+        <button>Подробнее</button>
+      </div>
+      <div class="book-card">
+        <img src="https://globusbooks.cdn.bibliopolis.com/pictures/12484.jpg?auto=webp&v=1691050415" alt="Book 2">
+        <h3>Преступление и наказание</h3>
+        <p>Ф. М. Достоевский</p>
+        <p class="price" style="color: black;">₽450</p>
+        <button>Подробнее</button>
+      </div>
+      <div class="book-card">
+        <img src="https://www.litres.ru/pub/c/cover/172100.jpg" alt="Book 3">
+        <h3>Анна Каренина</h3>
+        <p>Л. Н. Толстой</p>
+        <p class="price" style="color: black;">₽700</p>
+        <button>Подробнее</button>
+      </div>
+      <div class="book-card">
+        <img src="https://www.litres.ru/pub/c/cover/66691848.jpg" alt="Book 4">
+        <h3>Война и мир</h3>
+        <p>Л. Н. Толстой</p>
+        <p class="price" style="color: black;">₽900</p>
+        <button>Подробнее</button>
+      </div>
+      <div class="book-card">
+        <img src="https://cdn.azbooka.ru/cv/w1100/720dd5fc-486f-4f9c-a3a2-395742120f24.jpg" alt="Book 5">
+        <h3>Дон Кихот</h3>
+        <p>Мигель де Сервантес</p>
+        <p class="price" style="color: black;">₽650</p>
+        <button>Подробнее</button>
+      </div>
+    </div>
+  </div>
+
+   <!-- Section 2: Книги для начинающих -->
+<div class="section">
+  <h2>Книги для начинающих</h2>
+  <div class="book-grid">
+    <div class="book-card">
+      <img src="https://www.litres.ru/pub/c/cover/70766035.jpg" alt="Book 6">
+      <h3>Капитанская дочка</h3>
+      <p>А. С. Пушкин</p>
+      <p class="price" style="color: black;">₽350</p>
+      <button>Подробнее</button>
+    </div>
+    <div class="book-card">
+      <img src="https://cdn.azbooka.ru/cv/w1100/dd29233e-f2dc-4259-99ba-adf55d1b6022.jpg" alt="Book 7">
+      <h3>Дубровский</h3>
+      <p>А. С. Пушкин</p>
+      <p class="price" style="color: black;">₽400</p>
+      <button>Подробнее</button>
+    </div>
+    <div class="book-card">
+      <img src="https://litinstitut.ru/sites/default/files/vasiliev_fonvizin_obl.jpg" alt="Book 8">
+      <h3>Недоросль</h3>
+      <p>Д. И. Фонвизин</p>
+      <p class="price" style="color: black;">₽280</p>
+      <button>Подробнее</button>
+    </div>
+    <div class="book-card">
+      <img src="https://cdn.azbooka.ru/cv/w1100/f58da535-6bff-4f54-84c3-10d1afde210b.jpg" alt="Book 9">
+      <h3>Мертвые души</h3>
+      <p>Н. В. Гоголь</p>
+      <p class="price" style="color: black;">₽500</p>
+      <button>Подробнее</button>
+    </div>
+    <div class="book-card">
+      <img src="https://globusbooks.cdn.bibliopolis.com/pictures/12484.jpg?auto=webp&v=1691050415" alt="Book 10">
+      <h3>Преступление и наказание</h3>
+      <p>Ф. М. Достоевский</p>
+      <p class="price" style="color: black;">₽450</p>
+      <button>Подробнее</button>
+    </div>
+  </div>
+</div>
+
+  
+  <!-- Section 3: Читатели выбирают сегодня -->
+<div class="section">
+    <h2>Читатели выбирают сегодня</h2>
+    <div class="book-grid">
+      <div class="book-card">
+        <img src="https://m.media-amazon.com/images/I/71rpa1-kyvL.jpg" alt="Book 11">
+        <h3>1984</h3>
+        <p>Джордж Оруэлл</p>
+        <p class="price" style="color: black;">₽550</p>
+        <button>Подробнее</button>
+      </div>
+      <div class="book-card">
+        <img src="https://strgimgr.umico.az/sized/840/515665-c59ca7dcf0c9931496f839809daecff7.jpg" alt="Book 12">
+        <h3>Цветы для Элджернона</h3>
+        <p>Дэниел Киз</p>
+        <p class="price" style="color: black;">₽450</p>
+        <button>Подробнее</button>
+      </div>
+      <div class="book-card">
+        <img src="https://cdn.eksmo.ru/v2/ITD000000001114572/COVER/cover1__w820.jpg" alt="Book 13">
+        <h3>Унесённые ветром</h3>
+        <p>Маргарет Митчелл</p>
+        <p class="price" style="color: black;">₽600</p>
+        <button>Подробнее</button>
+      </div>
+      <div class="book-card">
+        <img src="https://cdn.eksmo.ru/v2/ITD000000001056357/COVER/cover1__w600.jpg" alt="Book 14">
+        <h3>Крестный отец</h3>
+        <p>Марио Пьюзо</p>
+        <p class="price" style="color: black;">₽750</p>
+        <button>Подробнее</button>
+      </div>
+      <div class="book-card">
+        <img src="https://static.insales-cdn.com/images/products/1/7560/246357384/2284451_detail.jpg" alt="Book 15">
+        <h3>Оно</h3>
+        <p>Стивен Кинг</p>
+        <p class="price" style="color: black;">₽800</p>
+        <button>Подробнее</button>
+      </div>
+    </div>
+  </div>
+  
+
+<p>Исследуйте огромную коллекцию книг — от классики до бестселлеров.</p>
+    <a href="catalog.html" class="btn">Перейти в каталог</a>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 BookNest. Все права защищены.</p>
+  </footer>
+
+  <script src="script.js"></script>
+  <footer>
+    <div class="footer-content">
+      <a href="#">О нас</a>
+      <a href="#">Контакты</a>
+      <p>&copy; 2025 Онлайн Книжный Магазин</p>
+    </div>
+  </footer>
+</body>
+</html>

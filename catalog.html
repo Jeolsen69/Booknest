@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <title>Каталог книг — BookNest</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <div class="logo">BookNest</div>
+    <nav>
+      <a href="index.html">Главная</a>
+      <a href="catalog.html">Каталог</a>
+    </nav>
+  </header>
+
+  <main class="catalog-content">
+    <h1>Каталог книг</h1>
+    <div class="book-grid">
+      <div class="book-card">
+        <img src="https://via.placeholder.com/150x220?text=Book+1" alt="Book 1">
+        <h3>Название книги 1</h3>
+        <p>Автор: Иван Иванов</p>
+        <p>Цена: 450₽</p>
+        <button onclick="addToCart('Название книги 1')">Добавить в корзину</button>
+      </div>
+
+      <div class="book-card">
+        <img src="https://via.placeholder.com/150x220?text=Book+2" alt="Book 2">
+        <h3>Название книги 2</h3>
+        <p>Автор: Анна Петрова</p>
+        <p>Цена: 520₽</p>
+        <button onclick="addToCart('Название книги 2')">Добавить в корзину</button>
+      </div>
+
+      <div class="book-card">
+        <img src="https://via.placeholder.com/150x220?text=Book+3" alt="Book 3">
+        <h3>Название книги 3</h3>
+        <p>Автор: Сергей Смирнов</p>
+        <p>Цена: 390₽</p>
+        <button onclick="addToCart('Название книги 3')">Добавить в корзину</button>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 BookNest. Все права защищены.</p>
+  </footer>
+
+  <script src="script.js"></script>
+  <footer>
+    <div class="footer-content">
+      <a href="#">О нас</a>
+      <a href="#">Контакты</a>
+      <p>&copy; 2025 Онлайн Книжный Магазин</p>
+    </div>
+  </footer>
+</body>
+</html>
