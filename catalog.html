@@ -13,37 +13,265 @@
       <a href="catalog.html">Каталог</a>
     </nav>
   </header>
+  <div class="search-bar">
+    <input type="text" placeholder="Поиск книг..." />
+    <button>Поиск</button>
+
+  <div class="genre-bar">
+    <button onclick="filterBooks('all')">Все</button>
+    <button onclick="filterBooks('romance')">Романтика</button>
+    <button onclick="filterBooks('detective')">Детективы</button>
+    <button onclick="filterBooks('fantasy')">Фентези</button>
+    <button onclick="filterBooks('business')">Бизнес</button>
+  </div>
 
   <main class="catalog-content">
     <h1>Каталог книг</h1>
     <div class="book-grid">
-      <div class="book-card">
-        <img src="https://via.placeholder.com/150x220?text=Book+1" alt="Book 1">
-        <h3>Название книги 1</h3>
-        <p>Автор: Иван Иванов</p>
-        <p>Цена: 450₽</p>
-        <button onclick="addToCart('Название книги 1')">Добавить в корзину</button>
+      <div class="book-card romance">
+        <img src="https://m.media-amazon.com/images/I/51uZqZp+F9L.jpg" alt="Неправильная женщина">
+        <h3>Неправильная женщина</h3>
+        <p>Автор: Анна Стриковская</p>
+        <p class="price">Цена: 99₽</p>
+        <button>Подробнее</button>
       </div>
-
-      <div class="book-card">
-        <img src="https://via.placeholder.com/150x220?text=Book+2" alt="Book 2">
-        <h3>Название книги 2</h3>
-        <p>Автор: Анна Петрова</p>
-        <p>Цена: 520₽</p>
-        <button onclick="addToCart('Название книги 2')">Добавить в корзину</button>
+      
+      <div class="book-card romance">
+        <img src="https://m.media-amazon.com/images/I/51uZqZp+F9L.jpg" alt="Ангелина и её любовь">
+        <h3>Ангелина и её любовь</h3>
+        <p>Автор: Майский Модест</p>
+        <p class="price">Цена: 54₽</p>
+        <button>Подробнее</button>
       </div>
-
-      <div class="book-card">
-        <img src="https://via.placeholder.com/150x220?text=Book+3" alt="Book 3">
-        <h3>Название книги 3</h3>
-        <p>Автор: Сергей Смирнов</p>
-        <p>Цена: 390₽</p>
-        <button onclick="addToCart('Название книги 3')">Добавить в корзину</button>
+      
+      <div class="book-card romance">
+        <img src="https://m.media-amazon.com/images/I/51uZqZp+F9L.jpg" alt="Охота на птичку">
+        <h3>Охота на птичку</h3>
+        <p>Автор: Натали Эклер</p>
+        <p class="price">Цена: 141₽</p>
+        <button>Подробнее</button>
       </div>
-    </div>
-  </main>
+      
+      <div class="book-card romance">
+        <img src="https://ruslania.com/media/catalog/product/cache/1/image/800x800/9df78eab33525d08d6e5fb8d27136e95/p/e/pesn_pesnej_na_ulice_palermskoj.jpg" alt="Песнь песней на улице Палермской">
+        <h3>Песнь песней на улице Палермской</h3>
+        <p>Автор: Аннетт Бьергфельдтс</p>
+        <p class="price">Цена: 1364₽</p>
+        <button>Подробнее</button>
+      </div>
+      
+      <div class="book-card romance">
+        <img src="https://ruslania.com/media/catalog/product/cache/1/image/800x800/9df78eab33525d08d6e5fb8d27136e95/p/o/posmotri_na_menja.jpg" alt="Посмотри на меня">
+        <h3>Посмотри на меня</h3>
+        <p>Автор: Маша Трауб</p>
+        <p class="price">Цена: 1364₽</p>
+        <button>Подробнее</button>
+      </div>
+      
+      <div class="book-card romance">
+        <img src="https://ruslania.com/media/catalog/product/cache/1/image/800x800/9df78eab33525d08d6e5fb8d27136e95/t/v/tvoe_serdtse_budet_razbito.jpg" alt="Твое сердце будет разбито">
+        <h3>Твое сердце будет разбито</h3>
+        <p>Автор: Джейн Анна</p>
+        <p class="price">Цена: 2000₽</p>
+        <button>Подробнее</button>
+      </div>
+      
+      <div class="book-card romance">
+        <img src="https://ruslania.com/media/catalog/product/cache/1/image/800x800/9df78eab33525d08d6e5fb8d27136e95/s/e/sedmitsa_trehglazogo.jpg" alt="Седмица Трехглазого">
+        <h3>Седмица Трехглазого</h3>
+        <p>Автор: Борис Акунин</p>
+        <p class="price">Цена: 2545₽</p>
+        <button>Подробнее</button>
+      </div>
+      
+      <div class="book-card romance">
+        <img src="https://ruslania.com/media/catalog/product/cache/1/image/800x800/9df78eab33525d08d6e5fb8d27136e95/d/o/dom_v_kotorom.jpg" alt="Дом, в котором...">
+        <h3>Дом, в котором...</h3>
+        <p>Автор: Мариам Сергеевна Петросян</p>
+        <p class="price">Цена: 2000₽</p>
+        <button>Подробнее</button>
+      </div>
+      
+      <div class="book-card romance">
+        <img src="https://ruslania.com/media/catalog/product/cache/1/image/800x800/9df78eab33525d08d6e5fb8d27136e95/d/o/doktor_zhivago.jpg" alt="Доктор Живаго">
+        <h3>Доктор Живаго</h3>
+        <p>Автор: Борис Пастернак</p>
+        <p class="price">Цена: 818₽</p>
+        <button>Подробнее</button>
+      </div>
+      
+      <div class="book-card romance">
+        <img src="https://ruslania.com/media/catalog/product/cache/1/image/800x800/9df78eab33525d08d6e5fb8d27136e95/a/n/anna_karenina.jpg" alt="Анна Каренина">
+        <h3>Анна Каренина</h3>
+        <p>Автор: Лев Толстой</p>
+        <p class="price">Цена: 818₽</p>
+        <button>Подробнее</button>
+      </div>
+      
+      <div class="book-card romance">
+        <img src="https://m.media-amazon.com/images/I/51uZqZp+F9L.jpg" alt="Берег любви">
+        <h3>Берег любви</h3>
+        <p>Автор: Светлана Бестужева-Лада</p>
+        <p class="price">Цена: 138₽</p>
+        <button>Подробнее</button>
+      </div>
+      
+      <div class="book-card romance">
+        <img src="https://ruslania.com/media/catalog/product/cache/1/image/800x800/9df78eab33525d08d6e5fb8d27136e95/b/r/bereshka.jpg" alt="Берешка">
+        <h3>Берешка</h3>
+        <p>Автор: Марина Серова</p>
+        <p class="price">Цена: 299₽</p>
+        <button>Подробнее</button>
+      </div>
+      
+      <div class="book-card romance">
+        <img src="https://ruslania.com/media/catalog/product/cache/1/image/800x800/9df78eab33525d08d6e5fb8d27136e95/b/r/bereshka2.jpg" alt="Лето любви">
+        <h3>Лето любви</h3>
+        <p>Автор: Наталья Бенашвили</p>
+        <p class="price">Цена: 750₽</p>
+        <button>Подробнее</button>
+      </div>
+      
+      <div class="book-card romance">
+        <img src="https://ruslania.com/media/catalog/product/cache/1/image/800x800/9df78eab33525d08d6e5fb8d27136e95/r/e/rendzina.jpg" alt="Рендзина">
+        <h3>Рендзина</h3>
+        <p>Автор: Ирина Токмакова</p>
+        <p class="price">Цена: 620₽</p>
+        <button>Подробнее</button>
+      </div>
+      
+      <div class="book-card romance">
+        <img src="https://ruslania.com/media/catalog/product/cache/1/image/800x800/9df78eab33525d08d6e5fb8d27136e95/r/e/romantika.jpg" alt="Романтика">
+        <h3>Романтика</h3>
+        <p>Автор: Екатерина Лисова</p>
+        <p class="price">Цена: 415₽</p>
+        <button>Подробнее</button>
+      </div>
+    
 
-  <footer>
+      ><div class="book-card detective">
+        <img src="https://ruslania.com/media/catalog/product/cache/1/image/800x800/9df78eab33525d08d6e5fb8d27136e95/d/o/doktor_zhivago.jpg" alt="Шерлок Холмс. Дело о пропавшей девочке">
+        <h3>Шерлок Холмс. Дело о пропавшей девочке</h3>
+        <p>Автор: Артур Конан Дойл</p>
+        <p class="price">Цена: 718₽</p>
+        <button>Подробнее</button>
+      </div>
+      
+      <div class="book-card detective">
+        <img src="https://ruslania.com/media/catalog/product/cache/1/image/800x800/9df78eab33525d08d6e5fb8d27136e95/s/e/sledstvie_vedut_znaiki.jpg" alt="Следствие ведут Знаики">
+        <h3>Следствие ведут Знаики</h3>
+        <p>Автор: Юрий Дружков</p>
+        <p class="price">Цена: 620₽</p>
+        <button>Подробнее</button>
+      </div>
+      
+      <div class="book-card detective">
+        <img src="https://ruslania.com/media/catalog/product/cache/1/image/800x800/9df78eab33525d08d6e5fb8d27136e95/p/e/pesn_pesnej_na_ulice_palermskoj.jpg" alt="Следствие ведет Рейнджер">
+        <h3>Следствие ведет Рейнджер</h3>
+        <p>Автор: Владимир Шигин</p>
+        <p class="price">Цена: 420₽</p>
+        <button>Подробнее</button>
+      </div>
+      
+      <div class="book-card detective">
+        <img src="https://ruslania.com/media/catalog/product/cache/1/image/800x800/9df78eab33525d08d6e5fb8d27136e95/t/v/tvoryashchii_sleduyushchee.jpg" alt="Тени в законе">
+        <h3>Тени в законе</h3>
+        <p>Автор: Анатолий Алексин</p>
+        <p class="price">Цена: 570₽</p>
+        <button>Подробнее</button>
+      </div>
+      
+      <div class="book-card detective">
+        <img src="https://ruslania.com/media/catalog/product/cache/1/image/800x800/9df78eab33525d08d6e5fb8d27136e95/s/e/sledstvie_protiv_nas.jpg" alt="Семейная тайна">
+        <h3>Семейная тайна</h3>
+        <p>Автор: Александр Бушков</p>
+        <p class="price">Цена: 340₽</p>
+        <button>Подробнее</button>
+      </div>
+      
+      <div class="book-card detective">
+        <img src="https://ruslania.com/media/catalog/product/cache/1/image/800x800/9df78eab33525d08d6e5fb8d27136e95/f/t/fritzhaupt_houston-4.jpg" alt="Заключенный номер три">
+        <h3>Заключенный номер три</h3>
+        <p>Автор: Дэвид Гильберт</p>
+        <p class="price">Цена: 520₽</p>
+        <button>Подробнее</button>
+      </div>
+      
+      <div class="book-card detective">
+        <img src="https://ruslania.com/media/catalog/product/cache/1/image/800x800/9df78eab33525d08d6e5fb8d27136e95/m/a/mafiahistory.jpg" alt="Мафиозное дело">
+        <h3>Мафиозное дело</h3>
+        <p>Автор: Джеймс Паттерсон</p>
+        <p class="price">Цена: 690₽</p>
+        <button>Подробнее</button>
+      </div>
+      
+      <div class="book-card detective">
+        <img src="https://ruslania.com/media/catalog/product/cache/1/image/800x800/9df78eab33525d08d6e5fb8d27136e95/d/o/dom_bespredelov.jpg" alt="Тайна замка Черных">
+        <h3>Тайна замка Черных</h3>
+        <p>Автор: Лев Головачев</p>
+        <p class="price">Цена: 459₽</p>
+        <button>Подробнее</button>
+      </div>
+      
+      <div class="book-card detective">
+        <img src="https://ruslania.com/media/catalog/product/cache/1/image/800x800/9df78eab33525d08d6e5fb8d27136e95/s/e/sledstvie_vedut_politseiski.jpg" alt="Шерлок Холмс и сыщик. Тайна улицы">
+        <h3>Шерлок Холмс и сыщик. Тайна улицы</h3>
+        <p>Автор: Алексей Воскресенский</p>
+        <p class="price">Цена: 750₽</p>
+        <button>Подробнее</button>
+      </div>
+      
+      <div class="book-card detective">
+        <img src="https://ruslania.com/media/catalog/product/cache/1/image/800x800/9df78eab33525d08d6e5fb8d27136e95/s/e/sledstvie_na_vysoke.jpg" alt="Судьба мистера Грена">
+        <h3>Судьба мистера Грена</h3>
+        <p>Автор: Ирина Шахова</p>
+        <p class="price">Цена: 420₽</p>
+        <button>Подробнее</button>
+      </div>
+      
+      <div class="book-card detective">
+        <img src="https://ruslania.com/media/catalog/product/cache/1/image/800x800/9df78eab33525d08d6e5fb8d27136e95/p/e/pedestrian_treasure.jpg" alt="Мистика ночного города">
+        <h3>Мистика ночного города</h3>
+        <p>Автор: Игорь Лев</p>
+        <p class="price">Цена: 510₽</p>
+        <button>Подробнее</button>
+      </div>
+      
+      <div class="book-card detective">
+        <img src="https://ruslania.com/media/catalog/product/cache/1/image/800x800/9df78eab33525d08d6e5fb8d27136e95/g/u/gulliver_adventure.jpg" alt="Следы на песке">
+        <h3>Следы на песке</h3>
+        <p>Автор: Виктория Мищенко</p>
+        <p class="price">Цена: 639₽</p>
+        <button>Подробнее</button>
+      </div>
+      
+      <div class="book-card detective">
+        <img src="https://ruslania.com/media/catalog/product/cache/1/image/800x800/9df78eab33525d08d6e5fb8d27136e95/b/a/baren_kriminalnoe_delo.jpg" alt="Криминальная история">
+        <h3>Криминальная история</h3>
+        <p>Автор: Юрий Баренов</p>
+        <p class="price">Цена: 350₽</p>
+        <button>Подробнее</button>
+      </div>
+      
+      <div class="book-card detective">
+        <img src="https://ruslania.com/media/catalog/product/cache/1/image/800x800/9df78eab33525d08d6e5fb8d27136e95/m/a/marcovich_del_most.jpg" alt="Мост в одиночестве">
+        <h3>Мост в одиночестве</h3>
+        <p>Автор: Борис Маркович</p>
+        <p class="price">Цена: 400₽</p>
+        <button>Подробнее</button>
+      </div>
+      
+      <div class="book-card detective">
+        <img src="https://ruslania.com/media/catalog/product/cache/1/image/800x800/9df78eab33525d08d6e5fb8d27136e95/o/s/oskapan_mystery.jpg" alt="Осколки судьбы">
+        <h3>Осколки судьбы</h3>
+        <p>Автор: Елена Воробьева</p>
+        <p class="price">Цена: 520₽</p>
+        <button>Подробнее</button>
+      </div>
+      
+
+
+ <footer>
     <p>&copy; 2025 BookNest. Все права защищены.</p>
   </footer>
 
