@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <title>Каталог книг — BookNest</title>
   <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/jpeg" href="https://png.pngtree.com/template/20190316/ourmid/pngtree-books-logo-image_79985.jpg">
 </head>
 <body>
   <header>
@@ -15,9 +16,7 @@
       <a href="contact.html">Контакты</a>
     </nav>
   </header>
-  <div class="search-bar">
-    <input type="text" placeholder="Поиск книг..." />
-    <button>Поиск</button>
+  
 
   <div class="genre-bar">
     <button onclick="filterBooks('all')">Все</button>
@@ -28,8 +27,13 @@
   </div>
 
   <main class="catalog-content">
+    <input type="text" id="searchInput" placeholder="Поиск по названию или автору..." oninput="searchBooks()" 
+style="margin: 20px auto; display: block; padding: 10px; width: 80%; max-width: 500px; border: 1px solid #ccc; border-radius: 5px;" />
     <h1>Каталог книг</h1>
     <div class="book-grid">
+      <p id="noResultsMessage" style="display: none; text-align: center; font-size: 18px; margin-top: 20px;">
+        Ничего не найдено...
+      </p>
       <div class="book-card romance">
         <img src="https://m.media-amazon.com/images/I/716gsvPI4EL._UF1000,1000_QL80_.jpg" alt="Неправильная женщина">
         <h3>Неправильная женщина</h3>
